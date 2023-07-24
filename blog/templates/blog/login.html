@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+
+{% block title %}
+{{ title }}
+{% endblock title %}
+
+
+{% block main %}
+<form action="" enctype="multipart/form-data" method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button class="btn btn-success">Kirish</button>
+</form>
+{% endblock main %}
+
